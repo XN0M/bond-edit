@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-alabaster: #F9F8F6;
+  --color-charcoal: #1A1A1A;
+  --color-taupe: #EBE5DE;
+  --color-muted: #6C6863;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #9B7419;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", Arial, sans-serif;
+  --ease-luxury: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+:root { color: #1A1A1A; background: #F9F8F6; font-family: "Inter", Arial, sans-serif; font-synthesis: none; }
+* { box-sizing: border-box; border-radius: 0 !important; }
+html { scroll-behavior: smooth; background: #F9F8F6; }
+body { margin: 0; min-width: 320px; background: #F9F8F6; overflow-x: hidden; }
+@layer base {
+  a { color: inherit; text-decoration: none; transition: color 500ms ease-out; }
+}
+button { font: inherit; }
+::selection { color: #F9F8F6; background: #1A1A1A; }
+
+.paper-noise { position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: 0.022; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.85'/%3E%3C/svg%3E"); }
+.vertical-label { writing-mode: vertical-rl; transform: rotate(180deg); }
+.drop-cap::first-letter { float: left; margin: 0.04em 0.12em 0 0; font-family: "Playfair Display", Georgia, serif; font-size: 4.9rem; line-height: .78; color: currentColor; }
+
+[data-reveal] { opacity: 0; transform: translateY(32px); transition: opacity 900ms cubic-bezier(.25,.46,.45,.94), transform 900ms cubic-bezier(.25,.46,.45,.94); }
+[data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+.animate-float { animation: float 2.4s ease-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  [data-reveal] { opacity: 1; transform: none; }
+  img { transform: none !important; }
+}
+
+@media (max-width: 767px) {
+  .drop-cap::first-letter { font-size: 4.2rem; }
+}
