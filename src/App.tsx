@@ -107,83 +107,83 @@ function App() {
       </header>
 
       <main id="contenido" tabIndex={-1}>
-        <section id="inicio" className="relative min-h-[calc(100svh-112px)] overflow-hidden pb-20 pt-14 md:pb-24 lg:pt-20">
-          <Container className="grid grid-cols-1 items-end gap-14 lg:grid-cols-12 lg:gap-8">
+        <section id="inicio" className="relative overflow-hidden pb-12 pt-10 md:pb-20 md:pt-14 lg:min-h-[calc(100svh-112px)] lg:pt-20">
+          <Container className="grid grid-cols-1 items-end gap-9 md:gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="relative z-10 lg:col-span-7 lg:pb-12" data-reveal>
               <SectionLabel>El futuro de la reparación capilar</SectionLabel>
-              <h1 className="mt-10 font-display text-[clamp(4rem,10vw,9rem)] leading-[0.82] tracking-[-0.06em]">Repara lo que<br /><em className="font-normal text-gold-dark">no puedes</em> ver</h1>
-              <div className="mt-10 grid gap-8 border-t border-charcoal/20 pt-8 md:grid-cols-2 lg:max-w-2xl">
+              <h1 className="mt-6 font-display text-[clamp(3.5rem,10vw,9rem)] leading-[0.84] tracking-[-0.055em] md:mt-10">Repara lo que<br /><em className="font-normal text-gold-dark">no puedes</em> ver</h1>
+              <div className="mt-6 grid gap-5 border-t border-charcoal/20 pt-5 md:mt-10 md:grid-cols-2 md:gap-8 md:pt-8 lg:max-w-2xl">
                 <p className="text-lg leading-relaxed text-muted">Tecnología molecular que reconstruye la estructura interna del cabello en un solo paso.</p>
                 <div className="flex items-start md:justify-end"><Button>Descubrir el tratamiento</Button></div>
               </div>
             </div>
             <div className="relative lg:col-span-5" data-reveal>
               <span className="vertical-label absolute -left-8 bottom-0 z-10 hidden text-[10px] font-medium uppercase tracking-[0.3em] text-muted xl:block">Bond Repair / Vol. 01</span>
-              <MediaFrame src="/assets/hero-hair.webp" alt="Cabello oscuro largo, sano y brillante en un retrato editorial" eager className="aspect-[3/4] lg:min-h-[620px]" />
+              <MediaFrame src="/assets/hero-hair.webp" alt="Cabello oscuro largo, sano y brillante en un retrato editorial" eager className="aspect-[4/5] md:aspect-[3/4] lg:min-h-[620px]" />
               <div className="absolute -bottom-5 -left-5 grid h-24 w-24 place-items-center bg-charcoal text-center text-[9px] uppercase leading-relaxed tracking-[0.18em] text-alabaster md:h-28 md:w-28">Tecnología<br />patentada</div>
             </div>
           </Container>
-          <Container className="mt-16 flex justify-between lg:mt-0"><span className="text-[10px] uppercase tracking-[0.25em] text-muted">Desplázate para descubrir</span><ArrowDown size={16} strokeWidth={1.25} className="animate-float" /></Container>
+          <Container className="mt-8 flex justify-between md:mt-12 lg:mt-0"><span className="text-[10px] uppercase tracking-[0.25em] text-muted">Desplázate para descubrir</span><ArrowDown size={16} strokeWidth={1.25} className="animate-float" /></Container>
         </section>
 
         <section aria-label="Resultados clave" className="border-y border-charcoal/20">
           <Container className="grid grid-cols-2 lg:grid-cols-4">
-            {['1 paso', '10 minutos', 'Todo tipo de cabello', 'Resultados desde el primer uso'].map((item, index) => <div key={item} className={`flex min-h-32 items-end border-charcoal/15 p-5 md:min-h-40 md:p-8 ${index % 2 ? 'border-l' : ''} ${index > 1 ? 'border-t lg:border-t-0' : ''} ${index === 2 ? 'lg:border-l' : ''}`}><span className="font-display text-2xl md:text-3xl">{index < 2 && <sup className="mr-2 font-sans text-[9px] text-muted">0{index + 1}</sup>}{item}</span></div>)}
+            {['1 paso', '10 minutos', 'Todo tipo de cabello', 'Resultados desde el primer uso'].map((item, index) => <div key={item} className={`flex min-h-24 items-end border-charcoal/15 p-4 md:min-h-40 md:p-8 ${index % 2 ? 'border-l' : ''} ${index > 1 ? 'border-t lg:border-t-0' : ''} ${index === 2 ? 'lg:border-l' : ''}`}><span className="font-display text-xl md:text-3xl">{index < 2 && <sup className="mr-2 font-sans text-[9px] text-muted">0{index + 1}</sup>}{item}</span></div>)}
           </Container>
         </section>
 
-        <section id="innovacion" className="scroll-mt-20 bg-charcoal py-24 text-alabaster md:py-32">
-          <Container className="grid gap-16 lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-5" data-reveal><SectionLabel light>Ciencia / Innovación</SectionLabel><EditorialHeading className="mt-10">La ciencia de una reparación <em className="font-normal text-gold">profunda</em></EditorialHeading></div>
+        <section id="innovacion" className="scroll-mt-20 bg-charcoal py-16 text-alabaster md:py-32">
+          <Container className="grid gap-10 md:gap-16 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-5" data-reveal><SectionLabel light>Ciencia / Innovación</SectionLabel><EditorialHeading className="mt-6 md:mt-10">La ciencia de una reparación <em className="font-normal text-gold">profunda</em></EditorialHeading></div>
             <div className="lg:col-span-7 lg:col-start-6" data-reveal><MediaFrame src="/assets/bond-science.webp" alt="Visualización artística de enlaces entre fibras capilares" className="aspect-[4/3]" /></div>
             <div className="lg:col-span-4 lg:col-start-2" data-reveal><p className="drop-cap text-lg leading-[1.75] text-alabaster/75">Los enlaces disulfuro forman la arquitectura interna de un cabello sano. El calor, el color, los procesos químicos y hasta el cepillado diario pueden debilitarlos.</p></div>
             <div className="space-y-8 lg:col-span-5 lg:col-start-7" data-reveal><h3 className="font-display text-4xl leading-tight md:text-5xl">BIODIFFUSION™ trabaja donde el daño comienza.</h3><p className="max-w-xl text-base leading-relaxed text-alabaster/65 md:text-lg">Su tecnología patentada distribuye los activos de reparación a través de la fibra y continúa actuando incluso después de que el cabello se seca. El resultado: una estructura más fuerte, suave y brillante.</p><a href={CAMPAIGN_URL} className="inline-flex items-center gap-3 border-b border-gold/70 pb-2 text-[10px] uppercase tracking-[0.22em] transition-colors duration-500 hover:text-gold focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold">Explorar en epres <ArrowUpRight size={13} /></a></div>
           </Container>
         </section>
 
-        <section id="como-funciona" className="scroll-mt-20 py-24 md:py-32">
+        <section id="como-funciona" className="scroll-mt-20 py-16 md:py-32">
           <Container>
             <div className="grid gap-12 lg:grid-cols-12" data-reveal><div className="lg:col-span-4"><SectionLabel>Ritual / 10 minutos</SectionLabel></div><EditorialHeading className="lg:col-span-7 lg:col-start-6">Un ritual simple.<br />Una diferencia <em className="font-normal text-gold-dark">visible.</em></EditorialHeading></div>
-            <div className="mt-20 grid lg:grid-cols-3">
-              {[['01', 'Mezcla', 'Vierte un vial de concentrado en el pulverizador, completa con agua hasta la línea y agita bien.'], ['02', 'Satura', 'Pulveriza generosamente sobre el cabello seco y sin lavar, desde la raíz hasta las puntas.'], ['03', 'Deja actuar', 'Espera un mínimo de 10 minutos. Después, lava y peina tu cabello como de costumbre.']].map(([num, title, copy], index) => <article key={num} className={`group border-t border-charcoal px-0 py-10 transition-colors duration-700 hover:bg-taupe/35 lg:min-h-[360px] lg:px-10 ${index > 0 ? 'lg:border-l' : ''}`} data-reveal><div className="flex items-center justify-between"><span className="text-[10px] font-medium tracking-[0.25em] text-muted">PASO {num}</span><span className="h-2 w-2 bg-gold transition-transform duration-500 group-hover:scale-[1.6]" /></div><h3 className="mt-20 font-display text-4xl md:text-5xl">{title}</h3><p className="mt-6 max-w-sm leading-relaxed text-muted">{copy}</p></article>)}
+            <div className="mt-10 grid md:mt-16 lg:mt-20 lg:grid-cols-3">
+              {[['01', 'Mezcla', 'Vierte un vial de concentrado en el pulverizador, completa con agua hasta la línea y agita bien.'], ['02', 'Satura', 'Pulveriza generosamente sobre el cabello seco y sin lavar, desde la raíz hasta las puntas.'], ['03', 'Deja actuar', 'Espera un mínimo de 10 minutos. Después, lava y peina tu cabello como de costumbre.']].map(([num, title, copy], index) => <article key={num} className={`group border-t border-charcoal px-0 py-8 transition-colors duration-700 hover:bg-taupe/35 lg:min-h-[360px] lg:px-10 lg:py-10 ${index > 0 ? 'lg:border-l' : ''}`} data-reveal><div className="flex items-center justify-between"><span className="text-[10px] font-medium tracking-[0.25em] text-muted">PASO {num}</span><span className="h-2 w-2 bg-gold transition-transform duration-500 group-hover:scale-[1.6]" /></div><h3 className="mt-8 font-display text-4xl md:mt-14 md:text-5xl lg:mt-20">{title}</h3><p className="mt-4 max-w-sm leading-relaxed text-muted md:mt-6">{copy}</p></article>)}
             </div>
           </Container>
         </section>
 
-        <section className="bg-taupe/70 py-24 md:py-32">
-          <Container className="grid items-center gap-16 lg:grid-cols-12 lg:gap-8">
+        <section className="bg-taupe/70 py-16 md:py-32">
+          <Container className="grid items-center gap-10 md:gap-16 lg:grid-cols-12 lg:gap-8">
             <div className="relative lg:col-span-6" data-reveal><span className="vertical-label absolute -right-8 top-0 z-10 hidden text-[10px] uppercase tracking-[0.3em] text-muted xl:block">El esencial / No. 01</span><MediaFrame src="/assets/bond-kit.webp" alt="Bodegón editorial de un tratamiento capilar con pulverizador y dos concentrados" className="aspect-[4/5]" /></div>
-            <div className="lg:col-span-5 lg:col-start-8" data-reveal><SectionLabel>El tratamiento</SectionLabel><EditorialHeading className="mt-10">Bond Repair<br /><em className="font-normal text-gold-dark">Starter Kit</em></EditorialHeading><p className="mt-8 max-w-lg text-lg leading-relaxed text-muted">Una fórmula concentrada y sin agua, diseñada para reparar el daño químico, térmico, mecánico y ambiental con una aplicación sencilla.</p><ul className="mt-10 divide-y divide-charcoal/15 border-y border-charcoal/15">{['Pulverizador reutilizable', 'Dos concentrados Bond Repair', 'Fórmula de cuatro ingredientes', 'Para todo tipo de cabello'].map((item) => <li key={item} className="flex items-center justify-between py-4 text-sm"><span>{item}</span><span className="h-1.5 w-1.5 bg-gold" /></li>)}</ul><div className="mt-10"><Button>Comprar ahora</Button></div><p className="mt-5 text-[10px] uppercase tracking-[0.18em] text-muted">La compra se completa en la tienda oficial de epres España.</p></div>
+            <div className="lg:col-span-5 lg:col-start-8" data-reveal><SectionLabel>El tratamiento</SectionLabel><EditorialHeading className="mt-6 md:mt-10">Bond Repair<br /><em className="font-normal text-gold-dark">Starter Kit</em></EditorialHeading><p className="mt-5 max-w-lg text-lg leading-relaxed text-muted md:mt-8">Una fórmula concentrada y sin agua, diseñada para reparar el daño químico, térmico, mecánico y ambiental con una aplicación sencilla.</p><ul className="mt-6 divide-y divide-charcoal/15 border-y border-charcoal/15 md:mt-10">{['Pulverizador reutilizable', 'Dos concentrados Bond Repair', 'Fórmula de cuatro ingredientes', 'Para todo tipo de cabello'].map((item) => <li key={item} className="flex items-center justify-between py-3 text-sm md:py-4"><span>{item}</span><span className="h-1.5 w-1.5 bg-gold" /></li>)}</ul><div className="mt-6 md:mt-10"><Button>Comprar ahora</Button></div><p className="mt-4 text-[10px] uppercase tracking-[0.18em] text-muted md:mt-5">La compra se completa en la tienda oficial de epres España.</p></div>
           </Container>
         </section>
 
-        <section id="historia" className="scroll-mt-20 py-24 md:py-32">
-          <Container className="grid gap-16 lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-4 lg:col-start-2" data-reveal><SectionLabel>Origen / Eric Pressly, Ph.D.</SectionLabel><div className="mt-12 text-[7rem] font-light leading-none text-charcoal/[0.08] md:text-[11rem]">100<span className="text-gold-dark">+</span></div><p className="-mt-5 text-[10px] uppercase tracking-[0.25em] text-muted">Patentes en tecnología bond-repair</p></div>
-            <div className="lg:col-span-6 lg:col-start-7" data-reveal><EditorialHeading>Cuando la ciencia encuentra la <em className="font-normal text-gold-dark">creatividad.</em></EditorialHeading><div className="mt-12 grid gap-8 md:grid-cols-2"><p className="drop-cap leading-[1.75] text-muted">Eric Pressly descubrió su talento para la innovación mientras cursaba su doctorado en ciencia de materiales, trabajando desde productos farmacéuticos hasta la creación de la categoría bond-building en el cuidado capilar.</p><p className="leading-[1.75] text-muted">Con epres™, transforma esa experiencia en fórmulas profesionales, fáciles de usar y pensadas para lograr el máximo rendimiento con un impacto más consciente.</p></div><div className="mt-10"><Button secondary>Conoce la historia en epres</Button></div></div>
+        <section id="historia" className="scroll-mt-20 py-16 md:py-32">
+          <Container className="grid gap-10 md:gap-16 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-4 lg:col-start-2" data-reveal><SectionLabel>Origen / Eric Pressly, Ph.D.</SectionLabel><div className="mt-7 text-[6rem] font-light leading-none text-charcoal/[0.08] md:mt-12 md:text-[11rem]">100<span className="text-gold-dark">+</span></div><p className="-mt-4 text-[10px] uppercase tracking-[0.25em] text-muted md:-mt-5">Patentes en tecnología bond-repair</p></div>
+            <div className="lg:col-span-6 lg:col-start-7" data-reveal><EditorialHeading>Cuando la ciencia encuentra la <em className="font-normal text-gold-dark">creatividad.</em></EditorialHeading><div className="mt-7 grid gap-5 md:mt-12 md:grid-cols-2 md:gap-8"><p className="drop-cap leading-[1.75] text-muted">Eric Pressly descubrió su talento para la innovación mientras cursaba su doctorado en ciencia de materiales, trabajando desde productos farmacéuticos hasta la creación de la categoría bond-building en el cuidado capilar.</p><p className="leading-[1.75] text-muted">Con epres™, transforma esa experiencia en fórmulas profesionales, fáciles de usar y pensadas para lograr el máximo rendimiento con un impacto más consciente.</p></div><div className="mt-7 md:mt-10"><Button secondary>Conoce la historia en epres</Button></div></div>
           </Container>
         </section>
 
         <section className="border-y border-charcoal/20">
           <Container className="grid grid-cols-2 md:grid-cols-5">
-            {['Acid Free', 'Vegan', 'Cruelty Free', 'Biodegradable', 'Quat Free'].map((item, index) => <div key={item} className={`grid min-h-36 place-items-center p-5 text-center text-[10px] font-medium uppercase tracking-[0.2em] ${index > 0 ? 'border-l border-charcoal/15' : ''} ${index === 4 ? 'col-span-2 border-l-0 border-t md:col-span-1 md:border-l md:border-t-0' : ''}`}><span>{item}</span></div>)}
+            {['Acid Free', 'Vegan', 'Cruelty Free', 'Biodegradable', 'Quat Free'].map((item, index) => <div key={item} className={`grid min-h-24 place-items-center p-4 text-center text-[10px] font-medium uppercase tracking-[0.2em] md:min-h-36 md:p-5 ${index > 0 ? 'border-l border-charcoal/15' : ''} ${index === 4 ? 'col-span-2 border-l-0 border-t md:col-span-1 md:border-l md:border-t-0' : ''}`}><span>{item}</span></div>)}
           </Container>
         </section>
 
-        <section className="py-24 md:py-32">
-          <Container className="grid gap-16 lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-4" data-reveal><SectionLabel>FAQ / Lo esencial</SectionLabel><EditorialHeading className="mt-10">Preguntas,<br /><em className="font-normal text-gold-dark">resueltas.</em></EditorialHeading></div>
+        <section className="py-16 md:py-32">
+          <Container className="grid gap-10 md:gap-16 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-4" data-reveal><SectionLabel>FAQ / Lo esencial</SectionLabel><EditorialHeading className="mt-6 md:mt-10">Preguntas,<br /><em className="font-normal text-gold-dark">resueltas.</em></EditorialHeading></div>
             <div className="lg:col-span-7 lg:col-start-6" data-reveal>{faqItems.map((item, index) => <AccordionItem key={item.q} question={item.q} answer={item.a} index={index} />)}</div>
           </Container>
         </section>
 
-        <section className="bg-charcoal py-24 text-alabaster md:py-32">
-          <Container className="grid items-end gap-14 lg:grid-cols-12" data-reveal><div className="lg:col-span-8"><SectionLabel light>Tu cabello / Nueva estructura</SectionLabel><h2 className="mt-10 font-display text-[clamp(3.8rem,8vw,8rem)] leading-[0.88] tracking-[-0.05em]">Más fuerte.<br />Más suave.<br /><em className="font-normal text-gold">Más tú.</em></h2></div><div className="lg:col-span-3 lg:col-start-10"><p className="mb-8 leading-relaxed text-alabaster/65">Descubre la reparación molecular que continúa trabajando mucho después de aplicarla.</p><Button secondary light>Comprar el tratamiento</Button></div></Container>
+        <section className="bg-charcoal py-16 text-alabaster md:py-32">
+          <Container className="grid items-end gap-9 md:gap-14 lg:grid-cols-12" data-reveal><div className="lg:col-span-8"><SectionLabel light>Tu cabello / Nueva estructura</SectionLabel><h2 className="mt-6 font-display text-[clamp(3.4rem,8vw,8rem)] leading-[0.9] tracking-[-0.05em] md:mt-10">Más fuerte.<br />Más suave.<br /><em className="font-normal text-gold">Más tú.</em></h2></div><div className="lg:col-span-3 lg:col-start-10"><p className="mb-6 leading-relaxed text-alabaster/65 md:mb-8">Descubre la reparación molecular que continúa trabajando mucho después de aplicarla.</p><Button secondary light>Comprar el tratamiento</Button></div></Container>
         </section>
       </main>
 
       <footer className="bg-charcoal pb-10 text-alabaster">
-        <Container><Divider light /><div className="grid gap-12 py-12 md:grid-cols-12"><div className="md:col-span-5"><a href={CAMPAIGN_URL} className="font-display text-4xl tracking-[-0.045em]">The Bond <em className="font-normal text-gold">Edit</em></a><p className="mt-5 max-w-sm text-sm leading-relaxed text-alabaster/50">Un espacio editorial independiente dedicado a la ciencia de reparación capilar de epres™.</p></div><div className="grid grid-cols-2 gap-8 md:col-span-5 md:col-start-8"><div><p className="mb-5 text-[10px] uppercase tracking-[0.22em] text-alabaster/40">Descubrir</p><div className="space-y-3 text-sm"><a className="block hover:text-gold" href={CAMPAIGN_URL}>Innovación</a><a className="block hover:text-gold" href={CAMPAIGN_URL}>Cómo funciona</a><a className="block hover:text-gold" href={CAMPAIGN_URL}>Historia</a></div></div><div><p className="mb-5 text-[10px] uppercase tracking-[0.22em] text-alabaster/40">Visitar epres</p><div className="space-y-3 text-sm"><a className="block hover:text-gold" href={CAMPAIGN_URL}>Tienda oficial</a><a className="block hover:text-gold" href={CAMPAIGN_URL}>Profesionales</a><a className="block hover:text-gold" href={CAMPAIGN_URL}>Web oficial</a></div></div></div></div><Divider light /><div className="flex flex-col gap-3 pt-7 text-[9px] uppercase tracking-[0.18em] text-alabaster/35 sm:flex-row sm:justify-between"><span>© {new Date().getFullYear()} The Bond Edit — Micrositio editorial</span><span>Contenido inspirado en epres™</span></div></Container>
+        <Container><Divider light /><div className="grid gap-8 py-10 md:grid-cols-12 md:gap-12 md:py-12"><div className="md:col-span-5"><a href={CAMPAIGN_URL} className="font-display text-4xl tracking-[-0.045em]">The Bond <em className="font-normal text-gold">Edit</em></a><p className="mt-4 max-w-sm text-sm leading-relaxed text-alabaster/50 md:mt-5">Un espacio editorial independiente dedicado a la ciencia de reparación capilar de epres™.</p></div><div className="grid grid-cols-2 gap-6 md:col-span-5 md:col-start-8 md:gap-8"><div><p className="mb-4 text-[10px] uppercase tracking-[0.22em] text-alabaster/40 md:mb-5">Descubrir</p><div className="space-y-3 text-sm"><a className="block hover:text-gold" href={CAMPAIGN_URL}>Innovación</a><a className="block hover:text-gold" href={CAMPAIGN_URL}>Cómo funciona</a><a className="block hover:text-gold" href={CAMPAIGN_URL}>Historia</a></div></div><div><p className="mb-4 text-[10px] uppercase tracking-[0.22em] text-alabaster/40 md:mb-5">Visitar epres</p><div className="space-y-3 text-sm"><a className="block hover:text-gold" href={CAMPAIGN_URL}>Tienda oficial</a><a className="block hover:text-gold" href={CAMPAIGN_URL}>Profesionales</a><a className="block hover:text-gold" href={CAMPAIGN_URL}>Web oficial</a></div></div></div></div><Divider light /><div className="flex flex-col gap-3 pt-7 text-[9px] uppercase tracking-[0.18em] text-alabaster/35 sm:flex-row sm:justify-between"><span>© {new Date().getFullYear()} The Bond Edit — Micrositio editorial</span><span>Contenido inspirado en epres™</span></div></Container>
       </footer>
     </>
   )
